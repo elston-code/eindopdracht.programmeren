@@ -2,3 +2,16 @@ body {
     background: url('../images/backgroundsus.jpg');
     background-size: cover;
 }
+
+body main h1 {
+    color: crimson;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+body main h2 {
+    color: crimson;
+    margin-bottom: 10px;
+}
