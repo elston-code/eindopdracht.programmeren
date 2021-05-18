@@ -27,6 +27,7 @@ body main h2 {
     color: crimson;
     margin-bottom: 10px;
     font-family: 'VCR_OSD_MONO_1.001';
+    text-align: center;
 }
 
 
@@ -34,6 +35,8 @@ h3 {
     font-family: 'VCR_OSD_MONO_1.001';
     font-weight: 500;
     color: crimson;
+    margin-top: 50px;
+    margin-bottom: 65px;
 }
 
 label {
@@ -59,5 +62,13 @@ article div {
 }
 
 #pakje img {
+    width: 50px;
+}
+
+#hoeden button {
+    margin-left: 25px;
+}
+
+#hoeden img {
     width: 50px;
 }
