@@ -10,7 +10,11 @@ body {
     background-size: cover;
 }
 
-body main h1 {
+body main {
+    display: flex;
+}
+
+body h1 {
     color: crimson;
     display: block;
     width: 100%;
@@ -35,12 +39,22 @@ h3 {
     color: crimson;
 }
 
-[type="radio"] {
-    position: absolute;
-}
-
 label {
     position: relative;
     line-height: 2rem;
     padding: 0 0 0 3rem;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+article div {
+    display: flex;
+}
+
+#pakje img {
+    width: 25%;
 }
