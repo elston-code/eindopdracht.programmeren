@@ -86,3 +86,18 @@ article div {
     border-width: 1px;
     border-radius: 100px;
 }
+
+#dieren div {
+    gap: 50px;
+}
+
+#pop {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#pop img {
+    width: 120%;
+}
