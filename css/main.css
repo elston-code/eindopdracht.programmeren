@@ -108,4 +108,7 @@ article div {
 
 #classhoed {
     position: absolute;
+    top: -110px;
+    left: 115px;
+    width: 50%;
 }
