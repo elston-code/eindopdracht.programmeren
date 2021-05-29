@@ -87,6 +87,7 @@ article div {
     border-radius: 100px;
 }
 
+
 #dieren div {
     gap: 50px;
 }
@@ -99,7 +100,7 @@ article div {
 }
 
 #pop #mainbody {
-    width: 120%;
+    width: 140%;
 }
 
 #pop div {
@@ -108,7 +109,14 @@ article div {
 
 #classhoed {
     position: absolute;
-    top: -110px;
-    left: 115px;
-    width: 50%;
+    top: -90px;
+    left: 105px;
+    width: 55%;
+}
+
+#classpet {
+    position: absolute;
+    right: -150px;
+    bottom: 10px;
+    width: 80%;
 }
