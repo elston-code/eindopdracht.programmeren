@@ -21,9 +21,11 @@ var hoedimg = document.querySelector("#classhoed")
 var dieren = document.querySelectorAll("#dieren button");
 var dierimg = document.querySelector("#classpet")
 
-console.log(susimg)
+var achtergrondimages = document.querySelectorAll("#achtergronden button");
+var body = document.querySelector("body")
 
- 
+console.log(body)
+
 
 function changeColor(event){
     console.log(susimg.src);
@@ -70,6 +72,18 @@ function changeDier(event){
     }
 }
 
+function changeAchtergrond(event){
+    console.log(event.target.dataset.bg);
+    body.classList.add('imposter')
+    if(sus.src == event.target.src){
+        // speelt geluid af
+        console.log('je hebt deze hoed al op');
+    } else {
+        console.log(event.target.dataset);
+        dierimg.src = event.target.src
+    }
+}
+
 
 // functies linken aan variabele
 
@@ -85,18 +99,23 @@ dieren.forEach(dier => {
     dier.addEventListener("click", changeDier);
 });
 
-let btn1 = document.querySelector('#btn-1');
-let btn2 = document.querySelector('#btn-2');
-let btn3 = document.querySelector('#btn-3');
-
-btn1.addEventListener('click', () =>{
-    document.body.style.backgroundImage = "url('images/backgroundsus.jpg')";
+achtergrondimages.forEach(achtergrondimages => {
+    achtergrondimages.addEventListener("click", changeAchtergrond);
 });
 
-btn2.addEventListener('click', () =>{
-    document.body.style.backgroundImage = "url('images/.imposter.jpg')";
-});
+// let btn1 = document.querySelector('#btn-1');
+// let btn2 = document.querySelector('#btn-2');
+// let btn3 = document.querySelector('#btn-3');
 
-btn3.addEventListener('click', () =>{
-    document.body.style.backgroundImage = "url('images/crewmate.jpg')";
-});
+// btn1.addEventListener('click', () =>{
+//     document.body.style.backgroundImage = "url('images/backgroundsus.jpg')";
+// });
+
+// btn2.addEventListener('click', () =>{
+//     document.body.style.backgroundImage = "url('images/.imposter.jpg')";
+// });
+
+// btn3.addEventListener('click', () =>{
+//     document.body.style.backgroundImage = "url('images/crewmate.jpg')";
+// });
+
