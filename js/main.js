@@ -26,9 +26,9 @@ var dierimg = document.querySelector("#classpet")
 var achtergrondimages = document.querySelectorAll("#achtergronden button");
 var body = document.querySelector("body")
 
-// Deze functie vind plaats wanneer er geklikt word op de image die eraan gelinkt is.
-// Audio wordt afgespeeld zodra de event target src hetzelfde als de image is. 
-// Zo niet, dan wordt de image veranderd op de event target src image
+/* Deze functie vind plaats wanneer er geklikt word op de image die eraan gelinkt is.
+Audio wordt afgespeeld zodra de event target src hetzelfde als de image is. 
+Zo niet, dan wordt de image veranderd op de event target src image */
 
 function changeColor(event){
     console.log(susimg.src);
@@ -95,25 +95,54 @@ function changeAchtergrond(event){
 
     if(bg == 'imposter'){
         console.log('imposter');
-        document.body.classList.add('imposter-bg');
-        document.body.classList.remove('crew-bg');
-        document.body.classList.remove('sus-bg');
+        if(document.body.classList.value == 'imposter-bg'){
+            audioplay('audio/error.mp3')
+            console.log('error');
+        }
 
-        audioplay('audio/succes.mp3')
+        else {
+            audioplay('audio/succes.mp3')
+            console.log('succes');
+            document.body.classList.add('imposter-bg');
+            document.body.classList.remove('crew-bg');
+            document.body.classList.remove('sus-bg');
+            console.log(document.body.classList.value);
+        }
+
     } else if(bg == 'sus'){
         console.log('sus');
-        document.body.classList.add('sus-bg');
-        document.body.classList.remove('imposter-bg');
-        document.body.classList.remove('crew-bg');
+        console.log(document.body.classList.value);
 
-        audioplay('audio/succes.mp3')
-    } else if(bg == 'crewmate'){
+        if(document.body.classList.value == 'sus-bg'){
+            audioplay('audio/error.mp3')
+            console.log('error');
+        }
+
+        else {
+            audioplay('audio/succes.mp3')
+            console.log('succes');
+            document.body.classList.add('sus-bg');
+            document.body.classList.remove('imposter-bg');
+            document.body.classList.remove('crew-bg');
+
+        } 
+    
+    }else if(bg == 'crewmate'){
         console.log('crewmate');
-        document.body.classList.add('crew-bg');
-        document.body.classList.remove('imposter-bg');
-        document.body.classList.remove('sus-bg');
+        
+        if(document.body.classList.value == 'crew-bg'){
+            audioplay('audio/error.mp3')
+            console.log('error');
+        }
 
-        audioplay('audio/succes.mp3')
+        else {
+            audioplay('audio/succes.mp3')
+            console.log('succes');
+            document.body.classList.add('crew-bg');
+            document.body.classList.remove('imposter-bg');
+            document.body.classList.remove('sus-bg');
+        }
+
     }
 }
 
