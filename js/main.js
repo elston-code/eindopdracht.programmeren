@@ -59,6 +59,7 @@ function changeHoed(event){
         hoedimg.style.left = event.target.dataset.left
         hoedimg.style.width = event.target.dataset.width
         hoedimg.src = event.target.src
+        console.log("nu heb je deze hoed gekozen")
 
         audioplay('audio/succes.mp3')
     }
@@ -77,6 +78,7 @@ function changeDier(event){
         dierimg.style.bottom = event.target.dataset.bottom
         dierimg.style.width = event.target.dataset.width
         dierimg.src = event.target.src
+        console.log("nu heb je deze dier gekozen")
 
         audioplay('audio/succes.mp3')
     }
@@ -92,7 +94,7 @@ function changeAchtergrond(event){
         document.body.classList.remove('crew-bg');
         document.body.classList.remove('sus-bg');
 
-        audioplay('audio/error.mp3')
+        audioplay('audio/succes.mp3')
     } else if(bg == 'sus'){
         console.log('sus');
         document.body.classList.add('sus-bg');
@@ -105,7 +107,7 @@ function changeAchtergrond(event){
         document.body.classList.add('crew-bg');
         document.body.classList.remove('imposter-bg');
         document.body.classList.remove('sus-bg');
-        
+
         audioplay('audio/succes.mp3')
     }
 }
