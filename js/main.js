@@ -11,6 +11,8 @@
 //     console.log(kist.src)
 // }
 
+// per functie 2 variabele toegevoegd
+// 1 voor de image rechts en 1 voor de button links
 
 var susimg = document.querySelector("#mainbody")
 var btns = document.querySelectorAll(".pakje")
@@ -24,6 +26,9 @@ var dierimg = document.querySelector("#classpet")
 var achtergrondimages = document.querySelectorAll("#achtergronden button");
 var body = document.querySelector("body")
 
+// Deze functie vind plaats wanneer er geklikt word op de image die eraan gelinkt is.
+// Audio wordt afgespeeld zodra de event target src hetzelfde als de image is. 
+// Zo niet, dan wordt de image veranderd op de event target src image
 
 function changeColor(event){
     console.log(susimg.src);
