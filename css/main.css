@@ -5,13 +5,18 @@
     src: local('VCR_OSD_MONO_1.001'), url('../assets/VCR_OSD_MONO_1.001.ttf') format('woff');
 }
 
-body {
-    background: url('../images/backgroundsus.jpg');
+.imposter-bg {
+    background: url('../images/imposter.jpg');
     background-size: cover;
 }
 
-.imposter {
-    background: url('../images/imposter.jpg');
+.crew-bg {
+    background: url('../images/crewmate.jpg');
+    background-size: cover;
+}
+
+.sus-bg {
+    background: url('../images/backgroundsus.jpg');
     background-size: cover;
 }
 

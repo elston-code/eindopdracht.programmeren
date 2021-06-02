@@ -24,8 +24,6 @@ var dierimg = document.querySelector("#classpet")
 var achtergrondimages = document.querySelectorAll("#achtergronden button");
 var body = document.querySelector("body")
 
-console.log(body)
-
 
 function changeColor(event){
     console.log(susimg.src);
@@ -34,11 +32,15 @@ function changeColor(event){
         // De image is al geklikt en dan krijg je dus een melding dat het al geklikt is.
         console.log('je hebt deze kleur al gekozen');
 
+        audioplay('audio/error.mp3')
+
     } else {
         // btns.src = event.target.src
         console.log("nu heb je deze kleur gekozen")
         // console.log(event.target.src);
         susimg.src = event.target.src
+
+        audioplay('audio/succes.mp3')
     }
 }
 
@@ -49,12 +51,16 @@ function changeHoed(event){
     if(hoedimg.src == event.target.src){
         // speelt geluid af
         console.log('je hebt deze hoed al op');
+
+        audioplay('audio/error.mp3')
     } else {
         console.log(event.target.dataset);
         hoedimg.style.top = event.target.dataset.top
         hoedimg.style.left = event.target.dataset.left
         hoedimg.style.width = event.target.dataset.width
         hoedimg.src = event.target.src
+
+        audioplay('audio/succes.mp3')
     }
 }
 
@@ -62,26 +68,52 @@ function changeDier(event){
     
     if(dierimg.src == event.target.src){
         // speelt geluid af
-        console.log('je hebt deze hoed al op');
+        console.log('je hebt deze dier al gekozen');
+
+        audioplay('audio/error.mp3')
     } else {
         console.log(event.target.dataset);
         dierimg.style.right = event.target.dataset.right
         dierimg.style.bottom = event.target.dataset.bottom
         dierimg.style.width = event.target.dataset.width
         dierimg.src = event.target.src
+
+        audioplay('audio/succes.mp3')
     }
 }
 
 function changeAchtergrond(event){
-    console.log(event.target.dataset.bg);
-    body.classList.add('imposter')
-    if(sus.src == event.target.src){
-        // speelt geluid af
-        console.log('je hebt deze hoed al op');
-    } else {
-        console.log(event.target.dataset);
-        dierimg.src = event.target.src
+
+    let bg = event.target.dataset.bg;
+
+    if(bg == 'imposter'){
+        console.log('imposter');
+        document.body.classList.add('imposter-bg');
+        document.body.classList.remove('crew-bg');
+        document.body.classList.remove('sus-bg');
+
+        audioplay('audio/error.mp3')
+    } else if(bg == 'sus'){
+        console.log('sus');
+        document.body.classList.add('sus-bg');
+        document.body.classList.remove('imposter-bg');
+        document.body.classList.remove('crew-bg');
+
+        audioplay('audio/succes.mp3')
+    } else if(bg == 'crewmate'){
+        console.log('crewmate');
+        document.body.classList.add('crew-bg');
+        document.body.classList.remove('imposter-bg');
+        document.body.classList.remove('sus-bg');
+        
+        audioplay('audio/succes.mp3')
     }
+}
+
+function audioplay(bestand){
+
+    let audio = new Audio(bestand)
+    audio.play()
 }
 
 
@@ -99,8 +131,8 @@ dieren.forEach(dier => {
     dier.addEventListener("click", changeDier);
 });
 
-achtergrondimages.forEach(achtergrondimages => {
-    achtergrondimages.addEventListener("click", changeAchtergrond);
+achtergrondimages.forEach(bg => {
+    bg.addEventListener("click", changeAchtergrond);
 });
 
 // let btn1 = document.querySelector('#btn-1');
