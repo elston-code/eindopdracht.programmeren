@@ -133,3 +133,8 @@ article div {
     bottom: 10px;
     width: 80%;
 }
+
+footer{
+    color: crimson;
+    font-family: 'VCR_OSD_MONO_1.001';
+}

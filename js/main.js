@@ -91,6 +91,7 @@ function changeDier(event){
 
 function changeAchtergrond(event){
 
+    // let gebruikt in plaats van een variabel
     let bg = event.target.dataset.bg;
 
     if(bg == 'imposter'){
