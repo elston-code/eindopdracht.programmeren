@@ -1,3 +1,5 @@
+// Kist opdracht voor inspiratie
+
 // var sus = document.querySelector("img");
 
 // sus.addEventListener("click", function(){
@@ -10,6 +12,8 @@
 //     kist.src = "images/chest4_open.gif";
 //     console.log(kist.src)
 // }
+
+
 
 // per functie 2 variabele toegevoegd
 // 1 voor de image rechts en 1 voor de button links
@@ -26,9 +30,8 @@ var dierimg = document.querySelector("#classpet")
 var achtergrondimages = document.querySelectorAll("#achtergronden button");
 var body = document.querySelector("body")
 
-/* Deze functie vind plaats wanneer er geklikt word op de image die eraan gelinkt is.
-Audio wordt afgespeeld zodra de event target src hetzelfde als de image is. 
-Zo niet, dan wordt de image veranderd op de event target src image */
+
+// Functie begint als er op een image wordt geklikt
 
 function changeColor(event){
     console.log(susimg.src);
@@ -171,20 +174,4 @@ dieren.forEach(dier => {
 achtergrondimages.forEach(bg => {
     bg.addEventListener("click", changeAchtergrond);
 });
-
-// let btn1 = document.querySelector('#btn-1');
-// let btn2 = document.querySelector('#btn-2');
-// let btn3 = document.querySelector('#btn-3');
-
-// btn1.addEventListener('click', () =>{
-//     document.body.style.backgroundImage = "url('images/backgroundsus.jpg')";
-// });
-
-// btn2.addEventListener('click', () =>{
-//     document.body.style.backgroundImage = "url('images/.imposter.jpg')";
-// });
-
-// btn3.addEventListener('click', () =>{
-//     document.body.style.backgroundImage = "url('images/crewmate.jpg')";
-// });
 
